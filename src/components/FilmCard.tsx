@@ -1,13 +1,14 @@
 import {Card, InputNumber} from 'antd';
+import {IFilmDetailed} from "../data/Film";
 
 const { Meta } = Card;
 
-export default function FilmCard(props: any) {
+export default function FilmCard(props: IFilmDetailed) {
     return(
         <Card
             hoverable
-            style={{ width: "30%", display: "inline-block", margin: "1%"}}
-            cover={<img alt="Film" src={props.imageUrl} />}
+            style={{ height: "700px", width: "30%", display: "inline-block", margin: "1%"}}
+            cover={<img alt="Film" src={props.imageUrl} style={{ height: "400px", objectFit: "cover" }} />}
         >
             <Meta title={props.name} description={props.description} />
             <br />

@@ -5,7 +5,13 @@ export interface IFilm {
     ticketPrice: number
 }
 
-export const films: IFilm[] = [
+export interface IFilmDetailed extends IFilm {
+    actors?: string[],
+    genres?: string[],
+    year?: number
+}
+
+export const filmsList: IFilmDetailed[] = [
     {
         name: 'The Timekeeper\'s Odyssey',
         description: 'In a world where time travel is possible, a brilliant physicist invents a device that can alter the course of history. When his creation falls into the wrong hands, a young archaeologist embarks on a thrilling journey through time to retrieve it, facing dangerous paradoxes and unexpected allies along the way.',
